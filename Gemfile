@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'chunky_png'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'httparty'
+gem 'rmagick'
