@@ -8,6 +8,14 @@ App.movement_notifications = App.cable.subscriptions.create("MovementNotificatio
   },
 
   received: function(data) {
-    console.log(data)
+    console.log(data);
+
+    var canvas = document.getElementById('game-canvas');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext('2d');
+
+      ctx.fillStyle = 'rgb(200, 0, 0)';
+      ctx.fillRect(data.x - 5, data.y - 5, 10, 10);
+    }
   }
 });
